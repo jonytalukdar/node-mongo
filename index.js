@@ -1,8 +1,10 @@
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
+var bodyParser = require('body-parser');
 
 const app = express();
 app.use(cors());
+app.use(bodyParser.json());
 
 const users = ['jerry', 'joney', 'jubayer', 'roney'];
 
@@ -18,6 +20,13 @@ app.get('/users/:id', (req, res) => {
   const id = req.params.id;
   const name = users[id];
   res.send({ id, name });
+});
+
+// post
+
+app.post('/addUser', (req, res) => {
+  console.log('post req send');
+  console.log(req.body);
 });
 
 app.listen(3000, () => console.log('app is runing in port 3000'));
