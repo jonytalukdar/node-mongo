@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jonytalukdar/node-mongo/issues"
   },
-  "homepage": "https://github.com/jonytalukdar/node-mongo#readme"
+  "homepage": "https://github.com/jonytalukdar/node-mongo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
