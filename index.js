@@ -25,7 +25,7 @@ app.get('/users/:id', (req, res) => {
 // post
 
 app.post('/addUser', (req, res) => {
-  const user = res.body;
+  const user = req.body;
   user.id = 12;
   res.send(user);
 });
